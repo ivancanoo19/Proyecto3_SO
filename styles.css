@@ -1,0 +1,261 @@
+:root{
+    --black: #000505; /* black */
+    --columbiaBlue: #7d9bc5; /* columibaBlue */
+    --white: #bfcde0; /* white */
+    --spaceCadet: #3b3355; /* ultraviolet */
+    --ultraviolet: #5d5d81; /* space cadet */
+    --fuentePrincipal: "Be Vietnam Pro", sans-serif;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: var(--fuentePrincipal);
+  }
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    background-color: var(--columbiaBlue);
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    color: var(--black);
+    font-size: 5rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+section{
+    display: flex;
+    justify-content: center;   
+}
+
+/*Estilos correspondientes a descripción sobre mí*/
+
+.descripcion-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    align-items: center;
+
+    justify-items: center;
+  }
+  
+  .contenedor-grid img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 1rem;
+  }
+  
+  .texto-descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    font-size: 1.8rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  
+  @media (min-width: 980px) {
+    .contenedor-grid {
+      grid-template-columns: 400px 2fr;
+      margin-left: 5rem;
+      margin-right: 5rem;
+    }
+  
+    .contenedor-grid img {
+      width: 400px;
+      height: 400px;
+    }
+
+    .texto-descripcion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1.8rem;
+        text-align: justify;
+        padding: 1rem 3rem;
+      }
+  }
+
+
+/*Cuadricula para los gustos musicales*/
+
+.gustos-musicales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .contenedor-grid__2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .album img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .album img:hover{
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+
+.album__texto{
+    font-size: 1.7rem;
+}
+  
+  @media (max-width: 960px) {
+    .contenedor-grid__2 {
+        grid-template-columns: 1fr;
+      }
+  
+    .album {
+        margin-bottom: 2rem;
+    }
+
+    .album img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+
+    .album img:hover{
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+  }
+
+/*Apartado de películas*/
+.gustos-peliculas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .contenedor-grid__3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .pelicula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pelicula img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .pelicula img:hover{
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+
+.pelicula__texto{
+    font-size: 1.7rem;
+}
+
+  @media (max-width: 960px) {
+    .contenedor-grid__3 {
+      grid-template-columns: 1fr;
+    }
+  
+    .pelicula {
+      margin-bottom: 2rem;
+    }
+  }
+
+
+
+.navegacion{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    background-color: var(--ultraviolet);
+}
+
+.navegacion__enlace{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.navegacion__enlace:hover{
+    font-size: 3rem;
+    font-weight:bolder;
+}
+
+.footer{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #5d5d81;
+}
+
+.footer__p{
+    font-size: 1rem;
+}
+
